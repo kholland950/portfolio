@@ -1,5 +1,5 @@
 {
-  "name": "codemash-js-dev-env",
+  "name": "starter-frontent-dev",
   "version": "1.0.0",
   "description": "JS Dev Environment",
   "scripts": {
@@ -8,7 +8,7 @@
     "scss-compile": "node-sass src/scss -o src/css",
     "watch": "node-sass -rw src/scss -o src/css"
   },
-  "author": "Cory House",
+  "author": "Kevin Holland",
   "license": "MIT",
   "dependencies": {
     "babel-core": "6.21.0",
