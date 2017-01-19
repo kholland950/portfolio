@@ -6,7 +6,8 @@ module.exports = {
   target: 'web',
   entry: [
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'src/index.js')
+    path.resolve(__dirname, 'src/index.js'),
+    path.resolve(__dirname, 'src/reload.min.js')
   ],
   output: {
     path: path.resolve(__dirname, 'src'),
