@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
 
-app.use('/css', express.static('src/css'));
+app.use('/', express.static('src'));
 
 app.listen(port, function(err) {
   if (err) {
