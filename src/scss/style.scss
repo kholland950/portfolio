@@ -184,7 +184,6 @@ main {
 
   section#about {
     background: white;
-    min-height: 100vh;
     padding: 2em;
     font-weight: 300;
     color: #2A3A3F;
@@ -254,15 +253,6 @@ main {
           }
         }
       }
-    }
-    i.scrollTo {
-      position: absolute;
-      bottom: calc(-100vh + 1em);
-      left: 50%;
-      margin-left: -.5em;
-      background: white;
-      color: $secondary;
-      font-size: 3em;
     }
   }
 

@@ -128,7 +128,6 @@ header {
 
 main section#about {
   background: white;
-  min-height: 100vh;
   padding: 2em;
   font-weight: 300;
   color: #2A3A3F; }
@@ -178,14 +177,6 @@ main section#about {
           main section#about div.content section.skills .group section p {
             font-size: 1rem;
             margin-bottom: 1em; }
-  main section#about i.scrollTo {
-    position: absolute;
-    bottom: calc(-100vh + 1em);
-    left: 50%;
-    margin-left: -.5em;
-    background: white;
-    color: #253031;
-    font-size: 3em; }
 
 main section#projects {
   padding: 2em;
