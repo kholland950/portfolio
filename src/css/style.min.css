@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; }
+
+header {
+  background: #FE9927; }
+
+@media only screen and (max-device-width: 960px) {
+  body {
+    background: black; } }
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    background: red; } }

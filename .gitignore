@@ -40,6 +40,4 @@ jspm_packages
 yarn.lock
 .yarnclean
 
-#Compiled CSS
-src/css/
 
