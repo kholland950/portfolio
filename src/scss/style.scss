@@ -6,6 +6,7 @@ $accent: #F06868;
 $primary_hover: #2857A3;
 $secondary_hover: #334244;
 $accent_hover: #E58282;
+$animationTime: .25s;
 
 * {
   margin: 0;
@@ -84,6 +85,14 @@ header {
   background-size: cover;
   color: white;
   box-shadow: 0 0 15px #555;
+
+  a.mobile-nav-toggle {
+    display: none;
+    color: white;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
 
   nav {
     position: fixed;
@@ -188,16 +197,6 @@ main {
       font-size: 2em;
     }
 
-    // .me.circle-pic {
-    //   width: 5rem;
-    //   height: 5rem;
-    //   border-radius: 50%;
-    //   background: url('../img/me.jpg') no-repeat top center;
-    //   background-size: 120%;
-    //   margin-right: 1em;
-    //   border: 1px solid white;
-    // }
-
     div.content {
       display: flex;
       align-items: center;
@@ -211,14 +210,6 @@ main {
         text-shadow: 0 0 1px rbga(0,0,0,.3);
         line-height: 2em;
         text-align: center;
-
-        // strong {
-        //   background: $secondary;
-        //   color: white;
-        //   padding: .2em;
-        //   border-radius: .5em;
-        //   white-space: nowrap;
-        // }
       }
 
       section.skills {
@@ -232,11 +223,15 @@ main {
 
         .group {
           display: flex;
-          // flex-wrap: wrap;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
           section {
+            flex-basis: 25%;
+            min-width: 22em;
             margin: 2em;
-            width: 22em;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -277,16 +272,72 @@ main {
   }
 
   section#projects {
-    height: 100vh;
     padding: 2em;
     background: $secondary;
 
-    i.scrollTo {
-      font-size: 3em;
-      position: absolute;
-      bottom: calc(-200vh + 1em);
-      left: 50%;
-      margin-left: -.5em;
+    .project-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2em;
+
+      article.project {
+        position: flex;
+        margin: 1em;
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        padding: 1em;
+        border-radius: 1em;
+        width: 25em;
+        height: 25em;
+        max-width: 90vw;
+        max-height: 90vw;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        overflow: hidden;
+        box-sizing: border-box;
+
+        &.left {
+          background-position: left;
+        }
+
+        &.cover a {
+          opacity: .9;
+        }
+
+        &:hover {
+          a {
+            opacity: .9;
+          }
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: calc(100% + 2em);
+          height: calc(100% + 2em);
+          text-align: center;
+          text-decoration: none;
+          color: white;
+          background-image: linear-gradient(to bottom right,$primary,$accent);
+          opacity: 0;
+          transform: translate(-1em, -1em);
+          overflow: hidden;
+          text-shadow: 0 0 5px rgba(0,0,0,.5);
+          transition: $animationTime opacity ease-in-out;
+
+          span.title {
+            display: block;
+            font-size: 3em;
+          }
+          span.description {
+            margin-top: 1em;
+            font-size: 1rem;
+          }
+        }
+      }
     }
   }
 
@@ -294,14 +345,6 @@ main {
     padding: 2em;
     background: $primary;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
-
-    i.scrollTo {
-      font-size: 3em;
-      position: absolute;
-      bottom: calc(-300vh + 1em + 7rem);
-      left: 50%;
-      margin-left: -.5em;
-    }
 
     div.content {
       width: 100%;
@@ -315,6 +358,7 @@ main {
       margin-bottom: 1em;
       width: 75%;
       max-width: 40em;
+      font-family: 'Raleway', sans-serif;
 
       input, textarea {
         margin: .5em;
@@ -387,7 +431,6 @@ main {
 }
 
 aside {
-  $animationTime: .25s;
   display: none;
 
   ul {
@@ -484,6 +527,49 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
+  header {
+    a.mobile-nav-toggle {
+      display: block;
+      position: fixed;
+      text-shadow: 0 0 5px rgba(0,0,0,.8);
+    }
+    nav {
+      display: none;
+      opacity: 0;
+      transition: 1s opacity ease-in-out;
+      ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0 1em 1em 1em;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+        li {
+          text-align: center;
+          width: 100%;
+          a {
+            padding: 1.5em 0;
+            color: black;
+            width: 100%;
+            display: inline-block;
+            transition: $animationTime background ease-in-out;
+
+            &:focus {
+              background: #e2e2e2;
+            }
+          }
+        }
+      }
+
+      &.open {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
   aside {
     display: none;
   }
@@ -491,9 +577,10 @@ footer {
     section#about {
       flex-direction: column;
       justify-content: flex-start;
-
-      .me.circle-pic {
-        margin: 3em 0;
+    }
+    section#contact {
+      form {
+        width: 100%;
       }
     }
   }
@@ -528,47 +615,3 @@ footer {
   }
 
 }
-
-
-/**
-p {
-  text-align: center;
-  width: 100%;
-  font-weight: 300;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.skill {
-  float: left;
-  font-weight: 300;
-  margin: 1em;
-  padding: 1em;
-  width: 10em;
-  background: white;
-  color: $secondary;
-  border-radius: 1em;
-  border: 1px solid black;
-  text-align: center;
-
-
-  &.skill-5 {
-    background: $accent;
-  }
-  &.skill-4 {
-    background: linear-gradient(to right, $accent 0%, $accent 80%, white 80%);
-  }
-  &.skill-3 {
-    background: linear-gradient(to right, $accent 0%, $accent 60%, white 60%);
-  }
-  &.skill-2 {
-    background: linear-gradient(to right, $accent 0%, $accent 40%, white 40%);
-  }
-  &.skill-1 {
-    background: linear-gradient(to right, $accent 0%, $accent 20%, white 20%);
-  }
-}
-*/

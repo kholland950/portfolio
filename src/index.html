@@ -8,8 +8,8 @@
       rel="stylesheet">
 </head>
 <body>
-  <!-- <span id="logo" class="scroller" data-target="header">KH</span> -->
   <header id="header" class="slide" data-name="Top">
+    <a class="mobile-nav-toggle" href="#"><i class="material-icons">menu</i></a>
     <nav>
       <ul>
         <li>
@@ -52,7 +52,7 @@
                 I am constantly thinking up and working on side projects,
                 whether they are design ideas, or full stack applications.
               </p>
-              <a href="#">Go to my projects</a>
+              <a href="#" class="scroller" data-target="projects">Go to my projects</a>
             </section>
             <section>
               <i class="material-icons">brush</i>
@@ -62,7 +62,7 @@
                 intuitive way to bring an idea to life. I create simple and
                 beautiful UI's for the best user experience.
               </p>
-              <a href="#">Go to my CodePen</a>
+              <a href="https://codepen.io/kholland950/" target="_blank">Go to my CodePen</a>
             </section>
             <section>
               <i class="material-icons">code</i>
@@ -72,31 +72,52 @@
                 I use modern technologies to build full stack applications
                 from the ground up.
               </p>
-              <a href="#">Go to my Github</a>
+              <a href="https://github.com/kholland950" target="_blank">Go to my Github</a>
             </section>
           </div>
-          <!-- <div class="row">
-            <span class="skill skill-5">Java</span>
-            <span class="skill skill-4">Spring MVC</span>
-          </div>
-          <div class="row">
-            <span class="skill skill-4">Front-end Design</span>
-            <span class="skill skill-3">Javascript</span>
-          </div>
-          <div class="row">
-            <span class="skill skill-2">React</span>
-            <span class="skill skill-1">Angular</span>
-          </div> -->
         </section>
       </div>
-      <!-- <i class="material-icons scrollTo" data-target='projects'>keyboard_arrow_down</i> -->
     </section>
     <section id="projects" class="slide" data-name="Projects">
-      <h1 class="section-header">My Projects</h1>
+      <h1 class="section-header">My Work</h1>
       <div class="project-grid">
-
+        <article class="project left" data-src="img/elofts.png">
+          <a href="http://e-lofts.com/" target="_blank">
+            <span class="title">E-Lofts</span>
+            <span class="description">Property Renter Website</span>
+          </a>
+        </article>
+        <article class="project" data-src="img/slrsystm.png">
+          <a href="http://slrsystm.space" target="_blank">
+            <span class="title">slrsystm</span>
+            <span class="description">HTML5 Canvas Solar System Model</span>
+          </a>
+        </article>
+        <article class="project left" data-src="img/pernt.png">
+          <a href="http://pernt.xyz" target="_blank">
+            <span class="title">pernt</span>
+            <span class="description">HTML5 Canvas Drawing/Sharing App</span>
+          </a>
+        </article>
+        <article class="project" data-src="img/cluttr.png">
+          <a href="https://github.com/kholland950/cluttr" target="_blank">
+            <span class="title">cluttr</span>
+            <span class="description">Social Network</span>
+          </a>
+        </article>
+        <article class="project" data-src="img/lugh.png">
+          <a>
+            <span class="title">Lugh-LMS</span>
+            <span class="description">UI Design for a start up LMS</span>
+          </a>
+        </article>
+        <article class="project" data-src="img/codepen.png">
+          <a href="https://codepen.io/kholland950/" target="_blank">
+            <span class="title">Codepen</span>
+            <span class="description">Check out my UI playground</span>
+          </a>
+        </article>
       </div>
-      <!-- <i class="material-icons scrollTo" data-target='contact'>keyboard_arrow_down</i> -->
     </section>
     <section id="contact" class="slide" data-name="Contact">
       <h1 class="section-header">Let's work together</h1>
@@ -120,7 +141,6 @@
           </div>
         </form>
       </div>
-      <!-- <i class="material-icons scrollTo" data-target='header'>keyboard_arrow_up</i> -->
     </section>
     <footer>
       <h3 class="footer-tagline">Handwritten by me.</h3>
@@ -145,6 +165,7 @@
   </aside>
 
 <script src="reload.min.js"></script>
+<script src="modernizr-custom.js"></script>
 <script src="https://use.fontawesome.com/16152268f5.js"></script>
 <script src="jquery-3.1.1.min.js"></script>
 <script src="index.js"></script>
