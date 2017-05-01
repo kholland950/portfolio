@@ -178,9 +178,6 @@ main section#about {
           main section#about div.content section.skills .group section p {
             font-size: 1rem;
             margin-bottom: 1em; }
-          main section#about div.content section.skills .group section a {
-            position: absolute;
-            margin-top: 10em; }
   main section#about i.scrollTo {
     position: absolute;
     bottom: calc(-100vh + 1em);
