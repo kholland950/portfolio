@@ -243,8 +243,7 @@ main section#contact {
   main section#contact form {
     margin-top: 1em;
     margin-bottom: 1em;
-    width: 75%;
-    max-width: 40em;
+    width: 50%;
     font-family: 'Raleway', sans-serif; }
     main section#contact form input, main section#contact form textarea {
       font-family: 'Raleway', sans-serif;
