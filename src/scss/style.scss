@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,300,600');
+@import url('font-awesome.min.css');
 
 $primary: #3066BE;
 $secondary: #253031;
@@ -297,6 +298,25 @@ main {
           }
         }
 
+        &[data-project="elofts"] {
+          background-image: url('/img/elofts.png');
+        }
+        &[data-project="slrsystm"] {
+          background-image: url('/img/slrsystm.png');
+        }
+        &[data-project="pernt"] {
+          background-image: url('/img/pernt.png');
+        }
+        &[data-project="cluttr"] {
+          background-image: url('/img/cluttr.png');
+        }
+        &[data-project="lugh"] {
+          background-image: url('/img/lugh.png');
+        }
+        &[data-project="codepen"] {
+
+        }
+
         a {
           display: flex;
           flex-direction: column;
@@ -379,10 +399,10 @@ main {
         outline: none;
         box-shadow: 0 .25em 1em rgba(0,0,0,.3);
         transition: box-shadow .25s ease-in-out,
-          background-color .25s ease-in-out;
+        background-color .25s ease-in-out;
 
         &:hover {
-          box-shadow: 0 .5em 2em rgba(0,0,0,.3);
+          box-shadow: 0 .3em 1.5em rgba(0,0,0,.3);
         }
         &.action {
           background-color: $accent;
