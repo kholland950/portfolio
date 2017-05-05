@@ -50,6 +50,7 @@ $(document).ready(function() {
   $("#contact-form").submit(function(e) {
     var form = $(this);
     form.addClass("submitting");
+    form.removeClass("error");
     var url = "http://asteria.duckdns.org:9090"; // the script where you handle the form input.
 
     $.ajax({
