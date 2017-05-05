@@ -256,9 +256,37 @@ main section#contact {
     margin-bottom: 1em;
     width: 50%;
     font-family: 'Raleway', sans-serif; }
+    main section#contact form .contact-complete {
+      display: none;
+      margin: 4em 2em;
+      padding: 2em;
+      color: white;
+      font-size: 1.25em; }
+    main section#contact form.submitting .form-group {
+      opacity: 0;
+      transform: translateX(-9999px); }
+    main section#contact form.submitting .preloader {
+      display: block; }
+    main section#contact form.contacted .form-group {
+      display: none; }
+    main section#contact form.contacted .contact-complete {
+      display: block;
+      text-align: center; }
+    main section#contact form .error-message {
+      display: none; }
+    main section#contact form.error .error-message {
+      display: block;
+      margin: .5em 0;
+      text-align: center;
+      background: white;
+      border-radius: .5em;
+      color: red;
+      font-weight: 400;
+      width: 100%;
+      padding: 1em; }
     main section#contact form input, main section#contact form textarea {
       font-family: 'Raleway', sans-serif;
-      margin: .5em;
+      margin: .5em 0;
       padding: 1em;
       width: 100%;
       font-size: 1rem;
@@ -411,15 +439,59 @@ footer {
   main section#contact form {
     width: 100%; } }
 
+.preloader {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-top: 10em;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: 5s spin ease-in-out;
+  animation-iteration-count: infinite; }
+  .preloader::before, .preloader::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%; }
+  .preloader::before {
+    background-color: #F06868;
+    margin-left: -2rem; }
+  .preloader::after {
+    background-color: #253031;
+    margin-left: 2rem; }
+
 @media screen and (max-width: 420px) {
   h1 {
     font-size: 2.5em !important; }
   main section#contact form input, main section#contact form textarea {
     padding: .5em;
-    margin: .5em; }
+    margin: .5em 0; }
   main section:last-of-type {
     height: auto !important; }
   footer {
     height: auto; }
     footer .footer-tagline {
       display: none; } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0); }
+  35% {
+    transform: rotate(720deg); }
+  50% {
+    transform: rotate(720deg); }
+  85% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(0); } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(0); } }

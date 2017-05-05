@@ -46,4 +46,27 @@ $(document).ready(function() {
   if (Modernizr.touchevents) {
     $("#projects article.project").addClass("cover");
   }
+
+  $("#contact-form").submit(function(e) {
+    var form = $(this);
+    form.addClass("submitting");
+    var url = "http://asteria.duckdns.org:9090"; // the script where you handle the form input.
+
+    $.ajax({
+       type: "POST",
+       url: url,
+       data: $("#contact-form").serialize(), // serializes the form's elements.
+       success: function(data) {
+         form.addClass("contacted");
+       },
+       error: function() {
+         form.addClass("error");
+       },
+       complete: function() {
+         form.removeClass("submitting");
+       }
+     });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+  });
 });
