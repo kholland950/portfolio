@@ -299,22 +299,22 @@ main {
         }
 
         &[data-project="elofts"] {
-          background-image: url('/img/elofts.png');
+          background-image: url('/img/elofts.jpg');
         }
         &[data-project="slrsystm"] {
-          background-image: url('/img/slrsystm.png');
+          background-image: url('/img/slrsystm.jpg');
         }
         &[data-project="pernt"] {
-          background-image: url('/img/pernt.png');
+          background-image: url('/img/pernt.jpg');
         }
         &[data-project="cluttr"] {
-          background-image: url('/img/cluttr.png');
+          background-image: url('/img/cluttr.jpg');
         }
         &[data-project="lugh"] {
-          background-image: url('/img/lugh.png');
+          background-image: url('/img/lugh.jpg');
         }
         &[data-project="codepen"] {
-
+          background-image: url('/img/codepen.jpg');
         }
 
         a {
@@ -627,6 +627,10 @@ footer {
     section#about {
       flex-direction: column;
       justify-content: flex-start;
+
+      div.content > p {
+        font-size: 1.25em;
+      }
     }
     section#contact {
       form {

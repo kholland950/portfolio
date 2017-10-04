@@ -210,15 +210,17 @@ main section#projects {
       main section#projects .project-grid article.project:hover a {
         opacity: .9; }
       main section#projects .project-grid article.project[data-project="elofts"] {
-        background-image: url("/img/elofts.png"); }
+        background-image: url("/img/elofts.jpg"); }
       main section#projects .project-grid article.project[data-project="slrsystm"] {
-        background-image: url("/img/slrsystm.png"); }
+        background-image: url("/img/slrsystm.jpg"); }
       main section#projects .project-grid article.project[data-project="pernt"] {
-        background-image: url("/img/pernt.png"); }
+        background-image: url("/img/pernt.jpg"); }
       main section#projects .project-grid article.project[data-project="cluttr"] {
-        background-image: url("/img/cluttr.png"); }
+        background-image: url("/img/cluttr.jpg"); }
       main section#projects .project-grid article.project[data-project="lugh"] {
-        background-image: url("/img/lugh.png"); }
+        background-image: url("/img/lugh.jpg"); }
+      main section#projects .project-grid article.project[data-project="codepen"] {
+        background-image: url("/img/codepen.jpg"); }
       main section#projects .project-grid article.project a {
         display: flex;
         flex-direction: column;
@@ -436,6 +438,8 @@ footer {
   main section#about {
     flex-direction: column;
     justify-content: flex-start; }
+    main section#about div.content > p {
+      font-size: 1.25em; }
   main section#contact form {
     width: 100%; } }
 
