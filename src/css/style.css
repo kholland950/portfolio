@@ -254,13 +254,14 @@ main section#projects {
         transform: translate(-1em, -1em);
         overflow: hidden;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        transition: 0.25s opacity ease-in-out; }
+        transition: 0.25s opacity ease-in-out;
+        font-weight: 300; }
         main section#projects .project-grid article.project a span.title {
           display: block;
           font-size: 3em; }
         main section#projects .project-grid article.project a span.description {
           margin-top: 1em;
-          font-size: 1rem; }
+          font-size: 1.15rem; }
 
 main section#contact {
   padding: 2em;

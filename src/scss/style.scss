@@ -359,6 +359,7 @@ main {
           overflow: hidden;
           text-shadow: 0 0 5px rgba(0,0,0,.5);
           transition: $animationTime opacity ease-in-out;
+          font-weight: 300;
 
           span.title {
             display: block;
@@ -366,7 +367,7 @@ main {
           }
           span.description {
             margin-top: 1em;
-            font-size: 1rem;
+            font-size: 1.15rem;
           }
         }
       }
