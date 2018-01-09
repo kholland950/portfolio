@@ -260,7 +260,7 @@ main section#projects {
           display: block;
           font-size: 3em; }
         main section#projects .project-grid article.project a span.description {
-          margin-top: 1em;
+          margin: 1em 3em 1em;
           font-size: 1.15rem; }
 
 main section#contact {
