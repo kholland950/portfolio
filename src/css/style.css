@@ -76,6 +76,7 @@ header {
   color: white;
   box-shadow: 0 0 15px #555;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://svgur.com/i/4Ac.svg") center no-repeat fixed;
+  background-size: cover;
   padding: 6em 0 3em; }
   header a.mobile-nav-toggle {
     display: none;
@@ -397,7 +398,7 @@ aside {
         transition: 0.14s opacity ease-in-out, 0.14s letter-spacing ease-in-out; }
 
 footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-bg.jpg") no-repeat center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/header-bg.jpg") no-repeat center fixed;
   background-position: 0 10em;
   padding: .5em; }
   footer h3 {
