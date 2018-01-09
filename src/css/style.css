@@ -33,14 +33,12 @@ a.button {
   color: white;
   background: #3066BE;
   text-shadow: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   font-size: 1.5rem;
   border-radius: .5rem;
   padding: .3em .5em; }
   a.button:hover {
-    background: #2857A3;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); }
+    background: #2857A3; }
 
 .social {
   display: flex;
@@ -51,7 +49,7 @@ a.button {
     font-size: 2rem;
     margin: 1rem;
     cursor: pointer;
-    transition: .25s text-shadow ease-in-out, .25s transform ease-in-out; }
+    transition: 0.14s text-shadow ease-in-out, 0.14s transform ease-in-out; }
     .social a:hover {
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
       transform: scale(1.25); }
@@ -67,18 +65,18 @@ span#logo {
   color: white;
   cursor: pointer;
   user-select: none;
-  transition: .25s transform ease-in-out, .25s text-shadow ease-in-out, .25s box-shadow ease-in-out; }
+  transition: 0.14s transform ease-in-out, 0.14s text-shadow ease-in-out, 0.14s box-shadow ease-in-out; }
   span#logo:hover {
     transform: scale(1.1);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.35); }
 
 header {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-bg.jpg") center no-repeat fixed;
   background-size: cover;
   color: white;
-  box-shadow: 0 0 15px #555; }
+  box-shadow: 0 0 15px #555;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://svgur.com/i/4Ac.svg") center no-repeat fixed;
+  padding: 6em 0 3em; }
   header a.mobile-nav-toggle {
     display: none;
     color: white;
@@ -113,26 +111,27 @@ header {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    text-shadow: 0 0 7px black; }
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
     header section.headline h1 {
       text-align: center;
       font-size: 4em;
       width: 100%;
-      font-weight: 100; }
+      font-weight: 300; }
     header section.headline h3 {
-      font-weight: 100;
-      margin-bottom: 3em; }
+      font-weight: 300;
+      font-size: 1.5em;
+      margin-bottom: 1em; }
     header section.headline a.link {
       color: white;
       text-decoration: underline;
       font-size: 1.75em; }
     header section.headline a.button {
       position: relative;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.3);
       font-weight: 300;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
       border: 2px solid #3066BE;
-      transition-duration: .25s;
+      transition-duration: .1s;
       transition-timing-function: ease-in-out;
       transition-property: background-color, padding; }
       header section.headline a.button:hover {
@@ -148,7 +147,7 @@ header {
 
 main section#about {
   background: white;
-  padding: 2em;
+  padding: 3em 2em 2em;
   font-weight: 300;
   color: #2A3A3F; }
   main section#about h1 {
@@ -168,7 +167,7 @@ main section#about {
       line-height: 2em;
       text-align: center; }
     main section#about div.content section.skills {
-      margin-top: 4em; }
+      margin-top: 3em; }
       main section#about div.content section.skills h3 {
         width: 100%;
         text-align: center;
@@ -176,7 +175,7 @@ main section#about {
       main section#about div.content section.skills .group {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center; }
         main section#about div.content section.skills .group section {
           flex-basis: 25%;
@@ -254,7 +253,7 @@ main section#projects {
         transform: translate(-1em, -1em);
         overflow: hidden;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        transition: 0.25s opacity ease-in-out;
+        transition: 0.14s opacity ease-in-out;
         font-weight: 300; }
         main section#projects .project-grid article.project a span.title {
           display: block;
@@ -264,7 +263,7 @@ main section#projects {
           font-size: 1.15rem; }
 
 main section#contact {
-  padding: 2em;
+  padding: 4em;
   background: #3066BE;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   main section#contact div.content {
@@ -335,7 +334,7 @@ main section#contact {
       border-radius: .5em;
       outline: none;
       box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.3);
-      transition: box-shadow .25s ease-in-out, background-color .25s ease-in-out; }
+      transition: box-shadow 0.14s ease-in-out, background-color 0.14s ease-in-out; }
       main section#contact form button:hover {
         box-shadow: 0 0.3em 1.5em rgba(0, 0, 0, 0.3); }
       main section#contact form button.action {
@@ -378,7 +377,7 @@ aside {
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         background: rgba(255, 255, 255, 0.3);
-        transition: 0.25s transform, 0.25s background ease-in-out;
+        transition: 0.14s transform, 0.14s background ease-in-out;
         transform-origin: .375em; }
       aside ul li:hover:after {
         background: rgba(255, 255, 255, 0.7);
@@ -395,12 +394,12 @@ aside {
         border-radius: 5px;
         position: absolute;
         margin-left: 2em;
-        transition: 0.25s opacity ease-in-out, 0.25s letter-spacing ease-in-out; }
+        transition: 0.14s opacity ease-in-out, 0.14s letter-spacing ease-in-out; }
 
 footer {
-  height: 8rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-bg.jpg") no-repeat center fixed;
-  background-position: 0 10em; }
+  background-position: 0 10em;
+  padding: .5em; }
   footer h3 {
     padding: 1rem 0;
     color: white;
@@ -416,7 +415,7 @@ footer {
       font-size: 2rem;
       margin: 1rem;
       cursor: pointer;
-      transition: .25s text-shadow ease-in-out, .25s transform ease-in-out; }
+      transition: 0.14s text-shadow ease-in-out, 0.14s transform ease-in-out; }
       footer div a:hover {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
         transform: scale(1.25); }
@@ -447,7 +446,7 @@ footer {
           color: black;
           width: 100%;
           display: inline-block;
-          transition: 0.25s background ease-in-out; }
+          transition: 0.14s background ease-in-out; }
           header nav ul li a:focus {
             background: #e2e2e2; }
     header nav.open {

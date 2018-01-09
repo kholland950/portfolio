@@ -7,7 +7,7 @@ $accent: #F06868;
 $primary_hover: #2857A3;
 $secondary_hover: #334244;
 $accent_hover: #E58282;
-$animationTime: .25s;
+$animationTime: .14s;
 
 * {
   margin: 0;
@@ -47,7 +47,7 @@ a.button {
   color: white;
   background: $primary;
   text-shadow: none;
-  box-shadow: 0 0 15px rgba(0,0,0,.3);
+  // box-shadow: 0 0 11px rgba(0,0,0,.2);
   text-decoration: none;
   font-size: 1.5rem;
   border-radius: .5rem;
@@ -55,7 +55,7 @@ a.button {
 
   &:hover {
     background: $primary_hover;
-    box-shadow: 0 0 25px rgba(0,0,0,.5);
+    // box-shadow: 0 0 19px rgba(0,0,0,.4);
   }
 }
 
@@ -69,8 +69,8 @@ a.button {
     font-size: 2rem;
     margin: 1rem;
     cursor: pointer;
-    transition: .25s text-shadow ease-in-out,
-      .25s transform ease-in-out;
+    transition: $animationTime text-shadow ease-in-out,
+      $animationTime transform ease-in-out;
 
     &:hover {
       text-shadow: 0 0 5px rgba(255,255,255,.35);
@@ -90,9 +90,9 @@ span#logo {
   color: white;
   cursor: pointer;
   user-select: none;
-  transition: .25s transform ease-in-out,
-    .25s text-shadow ease-in-out,
-    .25s box-shadow ease-in-out;
+  transition: $animationTime transform ease-in-out,
+    $animationTime text-shadow ease-in-out,
+    $animationTime box-shadow ease-in-out;
 
   &:hover {
     transform: scale(1.1);
@@ -102,11 +102,13 @@ span#logo {
 }
 
 header {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ),url('../img/header-bg.jpg') center no-repeat fixed;
+  //height: 100vh;
+  //background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ),url('../img/header-bg.jpg') center no-repeat fixed;
   background-size: cover;
   color: white;
   box-shadow: 0 0 15px #555;
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url('http://svgur.com/i/4Ac.svg') center no-repeat fixed;
+  padding: 6em 0 3em;
 
   a.mobile-nav-toggle {
     display: none;
@@ -163,17 +165,18 @@ header {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    text-shadow: 0 0 7px rgba(0,0,0,1);
+    text-shadow: 0 0 15px rgba(0,0,0,.3);
 
     h1 {
       text-align: center;
       font-size: 4em;
       width: 100%;
-      font-weight: 100;
+      font-weight: 300;
     }
     h3 {
-      font-weight: 100;
-      margin-bottom: 3em;
+      font-weight: 300;
+      font-size: 1.5em;
+      margin-bottom: 1em;
     }
 
     a.link {
@@ -184,11 +187,11 @@ header {
 
     a.button {
       position: relative;
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.3);
       font-weight: 300;
-      text-shadow: 0 0 5px rgba(0,0,0,.3);
+      text-shadow: 0 0 9px rgba(0,0,0,.1);
       border: 2px solid $primary;
-      transition-duration: .25s;
+      transition-duration: .1s;
       transition-timing-function: ease-in-out;
       transition-property: background-color, padding;
 
@@ -212,7 +215,7 @@ main {
 
   section#about {
     background: white;
-    padding: 2em;
+    padding: 3em 2em 2em;
     font-weight: 300;
     color: #2A3A3F;
 
@@ -240,7 +243,7 @@ main {
       }
 
       section.skills {
-        margin-top: 4em;
+        margin-top: 3em;
 
         h3 {
           width: 100%;
@@ -251,8 +254,9 @@ main {
         .group {
           display: flex;
           flex-wrap: wrap;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
+
           section {
             flex-basis: 25%;
             min-width: 22em;
@@ -375,7 +379,7 @@ main {
   }
 
   section#contact {
-    padding: 2em;
+    padding: 4em;
     background: $primary;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
 
@@ -470,8 +474,8 @@ main {
         border-radius: .5em;
         outline: none;
         box-shadow: 0 .25em 1em rgba(0,0,0,.3);
-        transition: box-shadow .25s ease-in-out,
-        background-color .25s ease-in-out;
+        transition: box-shadow $animationTime ease-in-out,
+        background-color $animationTime ease-in-out;
 
         &:hover {
           box-shadow: 0 .3em 1.5em rgba(0,0,0,.3);
@@ -571,9 +575,9 @@ aside {
 }
 
 footer {
-  height: 8rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ),url('../img/header-bg.jpg') no-repeat center fixed;
   background-position: 0 10em;
+  padding: .5em;
 
   h3 {
     padding: 1rem 0;
@@ -593,8 +597,8 @@ footer {
       font-size: 2rem;
       margin: 1rem;
       cursor: pointer;
-      transition: .25s text-shadow ease-in-out,
-        .25s transform ease-in-out;
+      transition: $animationTime text-shadow ease-in-out,
+        $animationTime transform ease-in-out;
 
       &:hover {
         text-shadow: 0 0 5px rgba(255,255,255,.35);
