@@ -380,7 +380,7 @@ main {
   }
 
   section#contact {
-    padding: 4em;
+    padding: 4em 2em;
     background: $primary;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
 
@@ -400,10 +400,13 @@ main {
 
       .contact-complete {
         display: none;
-        margin: 4em 2em;
-        padding: 2em;
+        margin: 6em 0;
         color: white;
         font-size: 1.25em;
+        
+        h2 {
+          max-width: 20em;
+        }
       }
 
       &.submitting {
@@ -421,8 +424,9 @@ main {
           display: none;
         }
         .contact-complete {
-          display: block;
+          display: flex;
           text-align: center;
+          justify-content: center;
         }
       }
 
